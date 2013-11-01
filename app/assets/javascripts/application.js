@@ -11,4 +11,6 @@
 // about supported directives.
 //
 //= require jquery
+//= require d3
+//= require d3.geo
 //= require_tree .
