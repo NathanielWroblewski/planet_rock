@@ -9,8 +9,12 @@ circle {
 }
 
 path {
-  fill: #CCC;
+  fill: #ccc;
   stroke: #fff;
+}
+
+path:hover {
+  fill: #bbb;
 }
 
 
