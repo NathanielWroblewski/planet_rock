@@ -9,12 +9,12 @@ circle {
 }
 
 path {
-  fill: #ccc;
-  stroke: #fff;
+  fill: rgb(140, 137, 125);
+  stroke: rgb(243, 240, 225);
 }
 
 path:hover {
-  fill: #bbb;
+  fill: rgba(140, 137, 125, 0.7);
 }
 
 

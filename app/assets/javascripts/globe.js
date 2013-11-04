@@ -2,8 +2,10 @@ $(document).ready(function(){
 
   var feature;
 
+  var width = $(window).width()
+
   var projection = d3.geo.azimuthal()
-      .scale(380)
+      .scale(width / 4)
       .origin([-71.03,42.37])
       .mode("orthographic")
       .translate([640, 400]);
@@ -23,7 +25,7 @@ $(document).ready(function(){
       .projection(projection);
 
   var svg = d3.select("#body").append("svg:svg")
-      .attr("width", 1280)
+      .attr("width", width / 4)
       .attr("height", 800)
       .on("mousedown", mousedown);
 
