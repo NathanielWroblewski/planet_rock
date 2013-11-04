@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/pivotal/jasmine-gem.git
+  revision: e8105401b6ed9d4b462bbbaf508ab7ac8a77a245
+  ref: e810540
+  specs:
+    jasmine (1.3.2)
+      jasmine-core (~> 1.3.1)
+      rack (~> 1.0)
+      rspec (>= 1.3.1)
+      selenium-webdriver (>= 0.1.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -28,6 +39,8 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     builder (3.1.4)
+    childprocess (0.3.9)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.0.9)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -36,12 +49,20 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (2.0.2)
+    ffi (1.9.3)
     haml (4.0.3)
       tilt
     hike (1.2.3)
     i18n (0.6.5)
+    jasmine-core (1.3.1)
+    jasmine-jquery-rails (1.5.9)
+    jasmine-rails (0.4.8)
+      jasmine-core (~> 1.3)
+      rails (>= 3.1.0)
+      sprockets-rails
     jbuilder (1.5.2)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -81,6 +102,15 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    rspec (2.14.1)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
+    rspec-core (2.14.7)
+    rspec-expectations (2.14.3)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.14.4)
+    rubyzip (1.0.0)
     sass (3.2.12)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -89,6 +119,11 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
+    selenium-webdriver (2.37.0)
+      childprocess (>= 0.2.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0.0)
+      websocket (~> 1.0.4)
     slop (3.4.6)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -110,6 +145,7 @@ GEM
     uglifier (2.3.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    websocket (1.0.7)
 
 PLATFORMS
   ruby
@@ -117,6 +153,10 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   haml
+  jasmine!
+  jasmine-core (= 1.3.1)
+  jasmine-jquery-rails
+  jasmine-rails
   jbuilder (~> 1.2)
   jquery-rails
   pg

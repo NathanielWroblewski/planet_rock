@@ -44,7 +44,9 @@ $(document).ready(function(){
     })
 
     $('path').on('dblclick', function(){
-      // ajax request for music
+      // $.get('countries/show'
+
+      // )
     })
   });
 

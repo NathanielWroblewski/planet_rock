@@ -16,3 +16,10 @@ gem 'uglifier', '>= 1.3.0'
 group :doc do
   gem 'sdoc', require: false
 end
+
+group :development, :test do
+  gem 'jasmine', github: 'pivotal/jasmine-gem', ref: 'e810540'
+  gem 'jasmine-core', '1.3.1'
+  gem 'jasmine-rails'
+  gem 'jasmine-jquery-rails'
+end
