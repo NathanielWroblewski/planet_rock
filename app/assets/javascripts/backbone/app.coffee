@@ -6,7 +6,6 @@
 
   App.addInitializer ->
     App.module('#bodyApp').start()
-    App.module('#countryApp').start()
 
   App.on 'initialize:after', ->
     Backbone.History.start() if Backbone.History

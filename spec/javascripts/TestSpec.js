@@ -12,3 +12,16 @@ describe('jasmine is installed', function() {
 
 
 // RAILS_ENV=test bundle exec rake spec:javascript
+describe('Our application', function (){
+  beforeEach(function() {
+    setFixtures('<div id="member"></div>')
+    this.view = new myView({
+      el: $('#member')
+    })
+  })
+
+  it('starts', function() {
+    App = new Marionette.Application()
+    expect(App).toBe();
+  })
+})
