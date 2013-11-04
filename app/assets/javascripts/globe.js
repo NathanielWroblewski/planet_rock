@@ -3,12 +3,13 @@ $(document).ready(function(){
   var feature;
 
   var width = $(window).width()
+  var height = $(window).height()
 
   var projection = d3.geo.azimuthal()
       .scale(width / 4)
       .origin([-71.03,42.37])
       .mode("orthographic")
-      .translate([640, 400]);
+      .translate([width/2, height/2]);
 
   var circle = d3.geo.greatCircle()
       .origin(projection.origin());
@@ -25,7 +26,7 @@ $(document).ready(function(){
       .projection(projection);
 
   var svg = d3.select("#body").append("svg:svg")
-      .attr("width", width / 4)
+      .attr("width", (width))
       .attr("height", 800)
       .on("mousedown", mousedown);
 
