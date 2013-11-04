@@ -13,5 +13,8 @@
 //= require jquery
 //= require d3
 //= require d3.geo
+//= require lib/underscore
+//= require lib/backbone
+//= require lib/backbone.marionette
 //= require globe
 //= require_tree .

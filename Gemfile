@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 ruby '2.0.0'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'eco'
 gem 'haml'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
