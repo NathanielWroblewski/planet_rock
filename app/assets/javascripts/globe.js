@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
+function renderGlobe() {
   var feature;
 
   var width = $(window).width()
@@ -26,15 +25,15 @@ $(document).ready(function(){
       .projection(projection);
 
   var svg = d3.select("#body").append("svg:svg")
-      .attr("width", (width))
-      .attr("height", 800)
+      .attr("width", width)
+      .attr("height", height)
       .on("mousedown", mousedown);
 
   d3.json("countries", function(collection) {
     feature = svg.selectAll("path")
-        .data(collection.features)
+      .data(collection.features)
       .enter().append("svg:path")
-        .attr("d", clip);
+      .attr("d", clip);
 
     feature.append("svg:title")
         .text(function(d) { return d.properties.name; });
@@ -93,5 +92,13 @@ $(document).ready(function(){
   function clip(d) {
     return path(circle.clip(d));
   }
+}
 
+$(window).ready(function() {
+  renderGlobe();
+
+  $(window).on('resize', function() {
+    $('svg').detach();
+    renderGlobe();
+  })
 })
