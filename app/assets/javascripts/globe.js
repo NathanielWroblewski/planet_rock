@@ -49,6 +49,9 @@ function renderGlobe() {
       }).done(function(response) {
         var url = response.url.replace('watch?v=', 'embed/') + '?autoplay=1';
         $('#music').attr('src', url);
+        $('#hint').html('<h2 style="color:rgba(140, 137, 125, 1);">' +
+          response.country + '<span style="color:rgba(140, 137, 125, 0.7);"> ' +
+           response.artist + '</span></h2>');
       });
     })
   });
@@ -109,9 +112,5 @@ $(window).ready(function() {
     else {
       $('#country').css('font-size', '72px');
     }
-  })
-
-  $(document).on('click', function() {
-    $('#hint').fadeOut(2000);
   })
 })
