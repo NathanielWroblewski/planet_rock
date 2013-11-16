@@ -44,9 +44,13 @@ function renderGlobe() {
     })
 
     $('path').on('dblclick', function(){
-      // $.get('countries/show'
-
-      // )
+      var selectedCountry = $(this).find('title').text();
+      $.get('countries/show/' + encodeURIComponent(selectedCountry), {
+      }).done(function(response) {
+        var url = response.url + '&autoplay=1';
+        $('#music').find('param').val(url);
+        $('#music').find('embed').attr('src', url);
+      });
     })
   });
 
@@ -100,5 +104,15 @@ $(window).ready(function() {
   $(window).on('resize', function() {
     $('svg').detach();
     renderGlobe();
+    if ($(window).width() < 700) {
+      $('#country').css('font-size', '42px');
+    }
+    else {
+      $('#country').css('font-size', '72px');
+    }
+  })
+
+  $(document).on('click', function() {
+    $('#hint').fadeOut(2000);
   })
 })

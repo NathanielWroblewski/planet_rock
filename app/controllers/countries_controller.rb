@@ -6,4 +6,8 @@ class CountriesController < ApplicationController
     render json: countries
   end
 
+  def show
+    country = Country.find_by(country: params[:country])
+    render json: country.attributes.with_indifferent_access.except(:id)
+  end
 end

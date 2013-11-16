@@ -30,8 +30,14 @@ line {
 }
 
 #country {
-  font-family: 'Raleway', sans-serif;
   text-align: right;
   padding-right: 50px;
-  font-size: 72px;
+}
+
+#hint {
+  color: rgba(140, 137, 125, 0.7);
+  width: 200px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
 }
