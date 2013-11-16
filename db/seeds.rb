@@ -6,7 +6,7 @@ artists =
     {country: "Albania",
      artist: "irini qirjako",
      url: "http://www.youtube.com/watch?v=NEQ8dY2cBvw"},
-    {country: "Algeri",
+    {country: "Algeria",
      artist: "cheb mami",
      url: "http://www.youtube.com/watch?v=VhjYaeotTYY"},
     {country: "Angola",

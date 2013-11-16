@@ -47,9 +47,8 @@ function renderGlobe() {
       var selectedCountry = $(this).find('title').text();
       $.get('countries/show/' + encodeURIComponent(selectedCountry), {
       }).done(function(response) {
-        var url = response.url + '&autoplay=1';
-        $('#music').find('param').val(url);
-        $('#music').find('embed').attr('src', url);
+        var url = response.url.replace('watch?v=', 'embed/') + '?autoplay=1';
+        $('#music').attr('src', url);
       });
     })
   });
