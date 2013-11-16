@@ -13,6 +13,7 @@ gem 'pg'
 gem 'pry'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
+gem 'unicorn'
 
 group :doc do
   gem 'sdoc', require: false
@@ -24,3 +25,5 @@ group :development, :test do
   gem 'jasmine-rails'
   gem 'jasmine-jquery-rails'
 end
+
+gem 'rails_12factor', group: :production
